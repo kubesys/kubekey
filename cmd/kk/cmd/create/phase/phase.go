@@ -35,6 +35,7 @@ func NewPhaseCommand() *cobra.Command {
 	cmds.AddCommand(NewCmdCreateConfigureKubernetes())
 	cmds.AddCommand(NewCmdCreateKubeSphere())
 	cmds.AddCommand(NewCmdApplyAddons())
+	cmds.AddCommand(NewCmdCreateAddon())
 
 	return cmds
 }

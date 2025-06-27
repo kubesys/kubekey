@@ -1,0 +1,56 @@
+apiVersion: kubekey.kubesphere.io/v1alpha2
+kind: Cluster
+metadata:
+  name: sample
+spec:
+  hosts:
+  - {name: node1, address: 172.16.0.2, internalAddress: 172.16.0.2, user: ubuntu, password: "Qcloud@123"}
+  - {name: node2, address: 172.16.0.3, internalAddress: 172.16.0.3, user: ubuntu, password: "Qcloud@123"}
+  roleGroups:
+    etcd:
+    - node1
+    control-plane: 
+    - node1
+    worker:
+    - node1
+    - node2
+  controlPlaneEndpoint:
+    ## Internal loadbalancer for apiservers 
+    # internalLoadbalancer: haproxy
+
+    domain: lb.kubesphere.local
+    address: ""
+    port: 6443
+  kubernetes:
+    version: v1.23.10
+    clusterName: cluster.local
+  network:
+    plugin: calico
+    kubePodsCIDR: 10.233.64.0/18
+    kubeServiceCIDR: 10.233.0.0/18
+    ## multus support. https://github.com/k8snetworkplumbingwg/multus-cni
+    multusCNI:
+      enabled: false
+  registry:
+    privateRegistry: ""
+    namespaceOverride: ""
+    registryMirrors: []
+    insecureRegistries: []
+  addons:
+  - name: nfs-client
+    namespace: kube-system
+    sources:
+      chart:
+        name: nfs-subdir-external-provisioner
+        repo: https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner/
+        values:
+        - nfs.server=172.16.0.2
+        - nfs.path=/mnt/demo
+        - storageClass.defaultClass=false
+  - name: snapshot-controller
+    namespace: kube-system
+    sources:
+      yaml:
+        path:
+        - https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-6.0/deploy/kubernetes/snapshot-controller/rbac-snapshot-controller.yaml
+        - https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-6.0/deploy/kubernetes/snapshot-controller/setup-snapshot-controller.yaml
