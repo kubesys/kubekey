@@ -8,14 +8,15 @@ Explanation of parameters:
 - name: xxx                  # the name of addon
   namespace: xxx             # namespace
   sources:                    # support both yaml and chart
-    chart:                          
+    chart:
       name: xxx              # the name of chart
       repo:  xxx             # the name of chart repo (url)
       path: xxx              # the location of chart  (path)
+      tgzPath: xxx           # the path to offline .tgz chart package
       values:  xxx           # specify values for chart (string list)
       valuesFile: xxx        # specify values file for chart (path / url)
-    yaml: 
-      path: []               # the location list of yaml (path / url) 
+    yaml:
+      path: []               # the location list of yaml (path / url)
       values:                # custom variables like helm values (not nessesary)
         key1: value1
 ```
@@ -86,4 +87,13 @@ spec:
         - ceph.userId=***
         - ceph.userKey=***
         - sc.isDefault=true
+
+  - name: offline-chart
+    namespace: kube-system
+    sources:
+      chart:
+        tgzPath: /path/to/your/chart.tgz    # offline .tgz chart package
+        values:
+        - key1=value1
+        - key2=value2
 ```
