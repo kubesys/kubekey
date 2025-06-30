@@ -37,6 +37,7 @@ type Chart struct {
 	Name       string   `yaml:"name" json:"name,omitempty"`
 	Repo       string   `yaml:"repo" json:"repo,omitempty"`
 	Path       string   `yaml:"path" json:"path,omitempty"`
+	TgzPath    string   `yaml:"tgzPath" json:"tgzPath,omitempty"`
 	Version    string   `yaml:"version" json:"version,omitempty"`
 	ValuesFile string   `yaml:"valuesFile" json:"valuesFile,omitempty"`
 	Values     []string `yaml:"values" json:"values,omitempty"`

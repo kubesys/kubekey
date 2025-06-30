@@ -29,10 +29,10 @@ import (
 	"helm.sh/helm/v3/pkg/cli"
 	"helm.sh/helm/v3/pkg/getter"
 
-	"github.com/kubesphere/kubekey/v3/cmd/kk/apis/kubekey/v1alpha2"
-	kubekeyapiv1alpha2 "github.com/kubesphere/kubekey/v3/cmd/kk/apis/kubekey/v1alpha2"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/common"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/logger"
+	"github.com/kubesys/kubekey/v3/cmd/kk/apis/kubekey/v1alpha2"
+	kubekeyapiv1alpha2 "github.com/kubesys/kubekey/v3/cmd/kk/apis/kubekey/v1alpha2"
+	"github.com/kubesys/kubekey/v3/cmd/kk/pkg/common"
+	"github.com/kubesys/kubekey/v3/cmd/kk/pkg/core/logger"
 )
 
 func InstallAddons(kubeConf *common.KubeConf, addon *kubekeyapiv1alpha2.Addon, kubeConfig string) error {

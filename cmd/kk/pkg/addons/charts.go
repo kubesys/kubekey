@@ -21,6 +21,7 @@ import (
 	"log"
 	"os"
 	"path/filepath"
+	"strings"
 	"time"
 
 	"github.com/pkg/errors"
@@ -35,9 +36,9 @@ import (
 	"helm.sh/helm/v3/pkg/storage/driver"
 	"k8s.io/client-go/util/homedir"
 
-	kubekeyapiv1alpha2 "github.com/kubesphere/kubekey/v3/cmd/kk/apis/kubekey/v1alpha2"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/common"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/logger"
+	kubekeyapiv1alpha2 "github.com/kubesys/kubekey/v3/cmd/kk/apis/kubekey/v1alpha2"
+	"github.com/kubesys/kubekey/v3/cmd/kk/pkg/common"
+	"github.com/kubesys/kubekey/v3/cmd/kk/pkg/core/logger"
 )
 
 func debug(format string, v ...interface{}) {
@@ -74,7 +75,19 @@ func InstallChart(kubeConf *common.KubeConf, addon *kubekeyapiv1alpha2.Addon, ku
 	client := action.NewUpgrade(actionConfig)
 
 	var chartName string
-	if addon.Sources.Chart.Name != "" {
+	// Support for offline .tgz chart packages
+	if addon.Sources.Chart.TgzPath != "" {
+		// Check if the .tgz file exists
+		if _, err := os.Stat(addon.Sources.Chart.TgzPath); os.IsNotExist(err) {
+			logger.Log.Fatalf("Chart .tgz file does not exist: %s", addon.Sources.Chart.TgzPath)
+		}
+		// Check if it's a .tgz file
+		if !strings.HasSuffix(strings.ToLower(addon.Sources.Chart.TgzPath), ".tgz") {
+			logger.Log.Fatalf("Chart file must be a .tgz file: %s", addon.Sources.Chart.TgzPath)
+		}
+		chartName = addon.Sources.Chart.TgzPath
+		logger.Log.Infof("Using offline chart package: %s", chartName)
+	} else if addon.Sources.Chart.Name != "" {
 		if addon.Sources.Chart.Repo == "" && addon.Sources.Chart.Path != "" {
 			fmt.Println(addon.Sources.Chart.Repo)
 			chartName = filepath.Join(addon.Sources.Chart.Path, addon.Sources.Chart.Name)
@@ -82,7 +95,7 @@ func InstallChart(kubeConf *common.KubeConf, addon *kubekeyapiv1alpha2.Addon, ku
 			chartName = addon.Sources.Chart.Name
 		}
 	} else {
-		logger.Log.Fatalln("No chart name is specified")
+		logger.Log.Fatalln("No chart name or tgzPath is specified")
 	}
 
 	args := []string{addon.Name, chartName}
