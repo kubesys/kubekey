@@ -75,6 +75,8 @@ func InstallChart(kubeConf *common.KubeConf, addon *kubekeyapiv1alpha2.Addon, ku
 	client := action.NewUpgrade(actionConfig)
 
 	var chartName string
+	var isOfflineTgz bool
+
 	// Support for offline .tgz chart packages
 	if addon.Sources.Chart.TgzPath != "" {
 		// Check if the .tgz file exists
@@ -86,6 +88,7 @@ func InstallChart(kubeConf *common.KubeConf, addon *kubekeyapiv1alpha2.Addon, ku
 			logger.Log.Fatalf("Chart file must be a .tgz file: %s", addon.Sources.Chart.TgzPath)
 		}
 		chartName = addon.Sources.Chart.TgzPath
+		isOfflineTgz = true
 		logger.Log.Infof("Using offline chart package: %s", chartName)
 	} else if addon.Sources.Chart.Name != "" {
 		if addon.Sources.Chart.Repo == "" && addon.Sources.Chart.Path != "" {
@@ -104,7 +107,12 @@ func InstallChart(kubeConf *common.KubeConf, addon *kubekeyapiv1alpha2.Addon, ku
 	client.Namespace = namespace
 	client.Timeout = 300 * time.Second
 	client.Keyring = defaultKeyring()
-	client.RepoURL = addon.Sources.Chart.Repo
+
+	// Only set RepoURL for non-tgz charts
+	if !isOfflineTgz {
+		client.RepoURL = addon.Sources.Chart.Repo
+	}
+
 	client.Version = addon.Sources.Chart.Version
 	client.Wait = addon.Sources.Chart.Wait
 	//client.Force = true
@@ -123,7 +131,12 @@ func InstallChart(kubeConf *common.KubeConf, addon *kubekeyapiv1alpha2.Addon, ku
 			instClient.Namespace = client.Namespace
 			instClient.Timeout = client.Timeout
 			instClient.Keyring = client.Keyring
-			instClient.RepoURL = client.RepoURL
+
+			// Only set RepoURL for non-tgz charts
+			if !isOfflineTgz {
+				instClient.RepoURL = client.RepoURL
+			}
+
 			instClient.Version = client.Version
 
 			r, err := runInstall(args, instClient, valueOpts, settings)
