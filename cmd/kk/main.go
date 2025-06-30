@@ -20,7 +20,7 @@ import (
 	"os"
 	"os/exec"
 
-	"github.com/kubesphere/kubekey/v3/cmd/kk/cmd"
+	"github.com/kubesys/kubekey/v3/cmd/kk/cmd"
 )
 
 // Using a separate entry-point can reduce the size of the binary file
