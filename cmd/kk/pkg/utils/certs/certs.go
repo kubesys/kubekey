@@ -29,7 +29,7 @@ import (
 	"k8s.io/apimachinery/pkg/util/sets"
 	certutil "k8s.io/client-go/util/cert"
 
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/common"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/common"
 )
 
 const (

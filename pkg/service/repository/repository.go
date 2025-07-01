@@ -25,12 +25,12 @@ import (
 
 	"github.com/pkg/errors"
 
-	infrav1 "github.com/kubesphere/kubekey/v3/api/v1beta1"
-	"github.com/kubesphere/kubekey/v3/pkg/service/operation/file"
-	"github.com/kubesphere/kubekey/v3/pkg/service/operation/repository"
-	"github.com/kubesphere/kubekey/v3/pkg/service/util"
-	"github.com/kubesphere/kubekey/v3/pkg/util/filesystem"
-	"github.com/kubesphere/kubekey/v3/util/osrelease"
+	infrav1 "github.com/kubesys/kubekey/api/v1beta1"
+	"github.com/kubesys/kubekey/pkg/service/operation/file"
+	"github.com/kubesys/kubekey/pkg/service/operation/repository"
+	"github.com/kubesys/kubekey/pkg/service/util"
+	"github.com/kubesys/kubekey/pkg/util/filesystem"
+	"github.com/kubesys/kubekey/util/osrelease"
 )
 
 // Check checks the OS release info.

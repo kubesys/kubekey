@@ -19,26 +19,26 @@ package pipelines
 import (
 	"fmt"
 
-	kubekeyapiv1alpha2 "github.com/kubesphere/kubekey/v3/cmd/kk/apis/kubekey/v1alpha2"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/etcd"
+	kubekeyapiv1alpha2 "github.com/kubesys/kubekey/cmd/kk/apis/kubekey/v1alpha2"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/etcd"
 
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/binaries"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/binaries"
 
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/container"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/container"
 
 	"github.com/pkg/errors"
 
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/artifact"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/bootstrap/confirm"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/bootstrap/precheck"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/certs"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/common"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/module"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/pipeline"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/filesystem"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/kubernetes"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/kubesphere"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/loadbalancer"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/artifact"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/bootstrap/confirm"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/bootstrap/precheck"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/certs"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/common"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/module"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/pipeline"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/filesystem"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/kubernetes"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/kubesphere"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/loadbalancer"
 )
 
 func NewUpgradeClusterPipeline(runtime *common.KubeRuntime) error {

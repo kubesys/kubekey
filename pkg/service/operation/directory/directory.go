@@ -21,7 +21,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/kubesphere/kubekey/v3/pkg/util/filesystem"
+	"github.com/kubesys/kubekey/pkg/util/filesystem"
 )
 
 // Make wraps the Linux command "mkdir -p -m <mode> <path>".

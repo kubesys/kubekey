@@ -17,8 +17,8 @@
 package images
 
 import (
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/common"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/task"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/task"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/common"
 )
 
 type PullModule struct {
@@ -50,7 +50,7 @@ func (p *PullModule) Init() {
 type CopyImagesToLocalModule struct {
 	common.ArtifactModule
 	ImageStartIndex int
-	ImageTransport string
+	ImageTransport  string
 }
 
 func (c *CopyImagesToLocalModule) Init() {

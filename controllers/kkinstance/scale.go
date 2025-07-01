@@ -1,5 +1,5 @@
 /*
- Copyright 2022 The KubeSphere Authors.
+ Copyright 2022 The kubesys Authors.
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@ import (
 	capicollections "sigs.k8s.io/cluster-api/util/collections"
 	ctrl "sigs.k8s.io/controller-runtime"
 
-	"github.com/kubesphere/kubekey/v3/pkg/scope"
+	"github.com/kubesys/kubekey/pkg/scope"
 )
 
 func (r *Reconciler) inPlaceUpgradeControlPlane(ctx context.Context, instanceScope *scope.InstanceScope) (_ ctrl.Result, retErr error) {

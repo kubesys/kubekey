@@ -1,4 +1,4 @@
-module github.com/kubesys/kubekey/v3
+module github.com/kubesys/kubekey
 
 go 1.23
 
@@ -22,7 +22,6 @@ require (
 	github.com/hashicorp/go-getter v1.6.2
 	github.com/imdario/mergo v0.3.13
 	github.com/jinzhu/copier v0.3.5
-	github.com/kubesys/kubekey/v3 v3.1.10
 	github.com/lestrrat-go/file-rotatelogs v2.4.0+incompatible
 	github.com/lithammer/dedent v1.1.0
 	github.com/mitchellh/mapstructure v1.5.0

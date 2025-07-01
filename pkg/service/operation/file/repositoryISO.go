@@ -21,18 +21,18 @@ import (
 	"path/filepath"
 	"strings"
 
-	infrav1 "github.com/kubesphere/kubekey/v3/api/v1beta1"
-	"github.com/kubesphere/kubekey/v3/pkg/clients/ssh"
-	"github.com/kubesphere/kubekey/v3/pkg/rootfs"
-	"github.com/kubesphere/kubekey/v3/pkg/service/operation/file/checksum"
-	"github.com/kubesphere/kubekey/v3/util/osrelease"
+	infrav1 "github.com/kubesys/kubekey/api/v1beta1"
+	"github.com/kubesys/kubekey/pkg/clients/ssh"
+	"github.com/kubesys/kubekey/pkg/rootfs"
+	"github.com/kubesys/kubekey/pkg/service/operation/file/checksum"
+	"github.com/kubesys/kubekey/util/osrelease"
 )
 
 // ISO info
 const (
 	ISOName        = "%s.iso"
 	ISOID          = "iso"
-	ISOURLPathTmpl = "/kubesphere/kubekey/releases/download/v2.2.2/%s"
+	ISOURLPathTmpl = "/kubesys/kubekey/releases/download/v2.2.2/%s"
 )
 
 // ISO is a Binary for repository ISO file.

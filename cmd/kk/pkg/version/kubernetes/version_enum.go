@@ -22,7 +22,7 @@ import (
 
 	versionutil "k8s.io/apimachinery/pkg/util/version"
 
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/files"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/files"
 )
 
 type Version int

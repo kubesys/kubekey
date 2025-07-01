@@ -18,7 +18,7 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/kubesys/kubekey/v3/cmd/kk/cmd/clusterinfo"
+	"github.com/kubesys/kubekey/cmd/kk/cmd/clusterinfo"
 	"os"
 	"os/exec"
 	"runtime"
@@ -27,18 +27,18 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/kubesys/kubekey/v3/cmd/kk/cmd/add"
-	"github.com/kubesys/kubekey/v3/cmd/kk/cmd/alpha"
-	"github.com/kubesys/kubekey/v3/cmd/kk/cmd/artifact"
-	"github.com/kubesys/kubekey/v3/cmd/kk/cmd/cert"
-	"github.com/kubesys/kubekey/v3/cmd/kk/cmd/completion"
-	"github.com/kubesys/kubekey/v3/cmd/kk/cmd/create"
-	"github.com/kubesys/kubekey/v3/cmd/kk/cmd/delete"
-	initOs "github.com/kubesys/kubekey/v3/cmd/kk/cmd/init"
-	"github.com/kubesys/kubekey/v3/cmd/kk/cmd/options"
-	"github.com/kubesys/kubekey/v3/cmd/kk/cmd/plugin"
-	"github.com/kubesys/kubekey/v3/cmd/kk/cmd/upgrade"
-	"github.com/kubesys/kubekey/v3/cmd/kk/cmd/version"
+	"github.com/kubesys/kubekey/cmd/kk/cmd/add"
+	"github.com/kubesys/kubekey/cmd/kk/cmd/alpha"
+	"github.com/kubesys/kubekey/cmd/kk/cmd/artifact"
+	"github.com/kubesys/kubekey/cmd/kk/cmd/cert"
+	"github.com/kubesys/kubekey/cmd/kk/cmd/completion"
+	"github.com/kubesys/kubekey/cmd/kk/cmd/create"
+	"github.com/kubesys/kubekey/cmd/kk/cmd/delete"
+	initOs "github.com/kubesys/kubekey/cmd/kk/cmd/init"
+	"github.com/kubesys/kubekey/cmd/kk/cmd/options"
+	"github.com/kubesys/kubekey/cmd/kk/cmd/plugin"
+	"github.com/kubesys/kubekey/cmd/kk/cmd/upgrade"
+	"github.com/kubesys/kubekey/cmd/kk/cmd/version"
 )
 
 type KubeKeyOptions struct {
@@ -103,7 +103,7 @@ func NewKubeKeyCommand(o KubeKeyOptions) *cobra.Command {
 		Long: `Deploy a Kubernetes or KubeSphere cluster efficiently, flexibly and easily. There are three scenarios to use KubeKey.
 1. Install Kubernetes only
 2. Install Kubernetes and KubeSphere together in one command
-3. Install Kubernetes first, then deploy KubeSphere on it using https://github.com/kubesphere/ks-installer`,
+3. Install Kubernetes first, then deploy KubeSphere on it using https://github.com/kubesys/ks-installer`,
 	}
 
 	cmds.AddCommand(initOs.NewCmdInit())

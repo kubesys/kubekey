@@ -18,16 +18,16 @@ package pipelines
 
 import (
 	"fmt"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/artifact"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/binaries"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/bootstrap/os"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/bootstrap/precheck"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/bootstrap/registry"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/common"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/logger"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/module"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/pipeline"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/filesystem"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/artifact"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/binaries"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/bootstrap/os"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/bootstrap/precheck"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/bootstrap/registry"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/common"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/logger"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/module"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/pipeline"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/filesystem"
 	"github.com/pkg/errors"
 )
 

@@ -27,9 +27,9 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/logger"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/util"
-	"github.com/kubesphere/kubekey/v3/version"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/logger"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/util"
+	"github.com/kubesys/kubekey/version"
 )
 
 const (
@@ -185,7 +185,7 @@ func NewKubeBinary(name, arch, version, prePath string, getCmd func(path, url st
 	case registry:
 		component.Type = REGISTRY
 		component.FileName = fmt.Sprintf("registry-%s-linux-%s.tar.gz", version, arch)
-		component.Url = fmt.Sprintf("https://github.com/kubesphere/kubekey/releases/download/v2.0.0-alpha.1/registry-%s-linux-%s.tar.gz", version, arch)
+		component.Url = fmt.Sprintf("https://github.com/kubesys/kubekey/releases/download/v2.0.0-alpha.1/registry-%s-linux-%s.tar.gz", version, arch)
 		if component.Zone == "cn" {
 			component.Url = fmt.Sprintf("https://kubernetes-release.pek3b.qingstor.com/registry/%s/registry-%s-linux-%s.tar.gz", version, version, arch)
 		}

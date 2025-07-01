@@ -23,16 +23,16 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/bootstrap/registry/templates"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/action"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/util"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/bootstrap/registry/templates"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/action"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/util"
 
 	"github.com/pkg/errors"
 
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/common"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/connector"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/files"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/utils"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/common"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/connector"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/files"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/utils"
 )
 
 //go:embed templates/harbor.yml.tmpl

@@ -19,8 +19,8 @@ package artifact
 import (
 	"github.com/spf13/cobra"
 
-	"github.com/kubesphere/kubekey/v3/cmd/kk/cmd/artifact/images"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/cmd/options"
+	"github.com/kubesys/kubekey/cmd/kk/cmd/artifact/images"
+	"github.com/kubesys/kubekey/cmd/kk/cmd/options"
 )
 
 type ArtifactOptions struct {

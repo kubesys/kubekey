@@ -19,11 +19,11 @@ package k3s
 import (
 	"path/filepath"
 
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/common"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/action"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/prepare"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/task"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/k3s/templates"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/common"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/action"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/prepare"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/task"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/k3s/templates"
 )
 
 type StatusModule struct {

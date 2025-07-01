@@ -19,7 +19,7 @@ package templates
 import (
 	"text/template"
 
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/util"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/util"
 )
 
 // RegistryMirrors defines the template for generating registry mirrors configuration files for containerd

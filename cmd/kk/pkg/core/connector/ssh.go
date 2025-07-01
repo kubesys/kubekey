@@ -36,9 +36,9 @@ import (
 	"golang.org/x/crypto/ssh"
 	"golang.org/x/crypto/ssh/agent"
 
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/common"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/logger"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/util"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/common"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/logger"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/util"
 )
 
 type Cfg struct {
@@ -261,7 +261,7 @@ func (c *connection) session() (*ssh.Session, error) {
 	if err := sess.Setenv("LANG", "en_US.UTF-8"); err != nil { // try make sure work with english language environments
 		logger.Log.Debugf("Failed to enforce LANG=en_US.UTF-8. (Error: %v)", err)
 	}
-	
+
 	return sess, nil
 }
 

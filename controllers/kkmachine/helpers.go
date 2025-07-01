@@ -1,5 +1,5 @@
 /*
- Copyright 2022 The KubeSphere Authors.
+ Copyright 2022 The kubesys Authors.
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -30,8 +30,8 @@ import (
 	"sigs.k8s.io/cluster-api/util/patch"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	infrav1 "github.com/kubesphere/kubekey/v3/api/v1beta1"
-	"github.com/kubesphere/kubekey/v3/pkg/scope"
+	infrav1 "github.com/kubesys/kubekey/api/v1beta1"
+	"github.com/kubesys/kubekey/pkg/scope"
 )
 
 func (r *Reconciler) createInstance(ctx context.Context, machineScope *scope.MachineScope,

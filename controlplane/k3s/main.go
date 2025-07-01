@@ -41,9 +41,9 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/controller"
 	"sigs.k8s.io/controller-runtime/pkg/healthz"
 
-	infrabootstrapv1 "github.com/kubesphere/kubekey/v3/bootstrap/k3s/api/v1beta1"
-	infracontrolplanev1 "github.com/kubesphere/kubekey/v3/controlplane/k3s/api/v1beta1"
-	"github.com/kubesphere/kubekey/v3/controlplane/k3s/controllers"
+	infrabootstrapv1 "github.com/kubesys/kubekey/bootstrap/k3s/api/v1beta1"
+	infracontrolplanev1 "github.com/kubesys/kubekey/controlplane/k3s/api/v1beta1"
+	"github.com/kubesys/kubekey/controlplane/k3s/controllers"
 	//+kubebuilder:scaffold:imports
 )
 
@@ -216,4 +216,5 @@ func main() {
 
 func concurrency(c int) controller.Options {
 	return controller.Options{MaxConcurrentReconciles: c}
+}
 }
