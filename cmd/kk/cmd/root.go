@@ -18,7 +18,7 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/cmd/clusterinfo"
+	"github.com/kubesys/kubekey/v3/cmd/kk/cmd/clusterinfo"
 	"os"
 	"os/exec"
 	"runtime"
@@ -27,18 +27,18 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/kubesphere/kubekey/v3/cmd/kk/cmd/add"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/cmd/alpha"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/cmd/artifact"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/cmd/cert"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/cmd/completion"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/cmd/create"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/cmd/delete"
-	initOs "github.com/kubesphere/kubekey/v3/cmd/kk/cmd/init"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/cmd/options"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/cmd/plugin"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/cmd/upgrade"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/cmd/version"
+	"github.com/kubesys/kubekey/v3/cmd/kk/cmd/add"
+	"github.com/kubesys/kubekey/v3/cmd/kk/cmd/alpha"
+	"github.com/kubesys/kubekey/v3/cmd/kk/cmd/artifact"
+	"github.com/kubesys/kubekey/v3/cmd/kk/cmd/cert"
+	"github.com/kubesys/kubekey/v3/cmd/kk/cmd/completion"
+	"github.com/kubesys/kubekey/v3/cmd/kk/cmd/create"
+	"github.com/kubesys/kubekey/v3/cmd/kk/cmd/delete"
+	initOs "github.com/kubesys/kubekey/v3/cmd/kk/cmd/init"
+	"github.com/kubesys/kubekey/v3/cmd/kk/cmd/options"
+	"github.com/kubesys/kubekey/v3/cmd/kk/cmd/plugin"
+	"github.com/kubesys/kubekey/v3/cmd/kk/cmd/upgrade"
+	"github.com/kubesys/kubekey/v3/cmd/kk/cmd/version"
 )
 
 type KubeKeyOptions struct {

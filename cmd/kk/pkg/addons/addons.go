@@ -37,7 +37,7 @@ import (
 
 func InstallAddons(kubeConf *common.KubeConf, addon *kubekeyapiv1alpha2.Addon, kubeConfig string) error {
 	// install chart
-	if addon.Sources.Chart.Name != "" {
+	if addon.Sources.Chart.Name != "" || addon.Sources.Chart.TgzPath != "" {
 		_ = os.Setenv("HELM_NAMESPACE", strings.TrimSpace(addon.Namespace))
 		if err := InstallChart(kubeConf, addon, kubeConfig); err != nil {
 			return err
