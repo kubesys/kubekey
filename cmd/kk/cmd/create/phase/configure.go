@@ -1,5 +1,5 @@
 /*
-Copyright 2022 The KubeSphere Authors.
+Copyright 2022 The kubesys Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -21,10 +21,10 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/kubesphere/kubekey/v3/cmd/kk/cmd/options"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/cmd/util"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/common"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/phase/kubernetes"
+	"github.com/kubesys/kubekey/cmd/kk/cmd/options"
+	"github.com/kubesys/kubekey/cmd/kk/cmd/util"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/common"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/phase/kubernetes"
 )
 
 type CreateConfigureKubernetesOptions struct {

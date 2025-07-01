@@ -48,12 +48,12 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/handler"
 	"sigs.k8s.io/controller-runtime/pkg/source"
 
-	infrabootstrapv1 "github.com/kubesphere/kubekey/v3/bootstrap/k3s/api/v1beta1"
-	"github.com/kubesphere/kubekey/v3/bootstrap/k3s/pkg/cloudinit"
-	"github.com/kubesphere/kubekey/v3/bootstrap/k3s/pkg/locking"
-	k3stypes "github.com/kubesphere/kubekey/v3/bootstrap/k3s/pkg/types"
-	kklog "github.com/kubesphere/kubekey/v3/util/log"
-	"github.com/kubesphere/kubekey/v3/util/secret"
+	infrabootstrapv1 "github.com/kubesys/kubekey/bootstrap/k3s/api/v1beta1"
+	"github.com/kubesys/kubekey/bootstrap/k3s/pkg/cloudinit"
+	"github.com/kubesys/kubekey/bootstrap/k3s/pkg/locking"
+	k3stypes "github.com/kubesys/kubekey/bootstrap/k3s/pkg/types"
+	kklog "github.com/kubesys/kubekey/util/log"
+	"github.com/kubesys/kubekey/util/secret"
 )
 
 // InitLocker is a lock that is used around kubeadm init.

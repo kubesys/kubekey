@@ -19,10 +19,10 @@ package customscripts
 import (
 	"fmt"
 
-	kubekeyapiv1alpha2 "github.com/kubesphere/kubekey/v3/cmd/kk/apis/kubekey/v1alpha2"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/connector"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/module"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/task"
+	kubekeyapiv1alpha2 "github.com/kubesys/kubekey/cmd/kk/apis/kubekey/v1alpha2"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/connector"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/module"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/task"
 )
 
 type CustomScriptsModule struct {

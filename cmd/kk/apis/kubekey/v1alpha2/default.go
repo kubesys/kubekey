@@ -21,7 +21,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/util"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/util"
 )
 
 const (

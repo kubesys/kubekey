@@ -19,9 +19,9 @@ package addons
 import (
 	"fmt"
 
-	kubekeyapiv1alpha2 "github.com/kubesys/kubekey/v3/cmd/kk/apis/kubekey/v1alpha2"
-	"github.com/kubesys/kubekey/v3/cmd/kk/pkg/common"
-	"github.com/kubesys/kubekey/v3/cmd/kk/pkg/core/task"
+	kubekeyapiv1alpha2 "github.com/kubesys/kubekey/cmd/kk/apis/kubekey/v1alpha2"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/common"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/task"
 )
 
 type AddonsModule struct {

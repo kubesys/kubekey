@@ -20,9 +20,9 @@ package provisioning
 import (
 	bootstrapv1 "sigs.k8s.io/cluster-api/bootstrap/kubeadm/api/v1beta1"
 
-	"github.com/kubesphere/kubekey/v3/pkg/clients/ssh"
-	"github.com/kubesphere/kubekey/v3/pkg/service/provisioning/cloudinit"
-	"github.com/kubesphere/kubekey/v3/pkg/service/provisioning/commands"
+	"github.com/kubesys/kubekey/pkg/clients/ssh"
+	"github.com/kubesys/kubekey/pkg/service/provisioning/cloudinit"
+	"github.com/kubesys/kubekey/pkg/service/provisioning/commands"
 )
 
 // Service holds a collection of interfaces.

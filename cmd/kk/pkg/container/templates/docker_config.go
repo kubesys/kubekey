@@ -24,7 +24,7 @@ import (
 
 	"github.com/lithammer/dedent"
 
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/common"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/common"
 )
 
 var DockerConfig = template.Must(template.New("daemon.json").Parse(

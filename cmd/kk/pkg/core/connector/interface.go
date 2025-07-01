@@ -17,7 +17,7 @@
 package connector
 
 import (
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/cache"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/cache"
 	"io"
 	"os"
 )

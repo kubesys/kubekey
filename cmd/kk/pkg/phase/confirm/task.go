@@ -11,10 +11,10 @@ import (
 	"github.com/modood/table"
 	versionutil "k8s.io/apimachinery/pkg/util/version"
 
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/bootstrap/confirm"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/common"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/connector"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/logger"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/bootstrap/confirm"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/common"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/connector"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/logger"
 )
 
 type UpgradeK8sConfirm struct {
@@ -218,7 +218,7 @@ func (c *CreateK8sConfirm) Execute(runtime connector.Runtime) error {
 	fmt.Println("")
 	fmt.Println("This is a simple check of your environment.")
 	fmt.Println("Before installation, ensure that your machines meet all requirements specified at")
-	fmt.Println("https://github.com/kubesphere/kubekey#requirements-and-recommendations")
+	fmt.Println("https://github.com/kubesys/kubekey#requirements-and-recommendations")
 	fmt.Println("")
 
 	if k8sVersion, err := versionutil.ParseGeneric(c.KubeConf.Cluster.Kubernetes.Version); err == nil {
@@ -227,7 +227,7 @@ func (c *CreateK8sConfirm) Execute(runtime connector.Runtime) error {
 			fmt.Println("Incorrect runtime. Please specify a container runtime other than Docker to install Kubernetes v1.24 or later.")
 			fmt.Println("You can set \"spec.kubernetes.containerManager\" in the configuration file to \"containerd\" or add \"--container-manager containerd\" to the \"./kk create cluster\" command.")
 			fmt.Println("For more information, see:")
-			fmt.Println("https://github.com/kubesphere/kubekey/blob/master/docs/commands/kk-create-cluster.md")
+			fmt.Println("https://github.com/kubesys/kubekey/blob/master/docs/commands/kk-create-cluster.md")
 			fmt.Println("https://kubernetes.io/docs/setup/production-environment/container-runtimes/#container-runtimes")
 			fmt.Println("https://kubernetes.io/blog/2022/02/17/dockershim-faq/")
 			fmt.Println("")

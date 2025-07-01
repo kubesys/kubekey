@@ -36,9 +36,9 @@ import (
 	"helm.sh/helm/v3/pkg/storage/driver"
 	"k8s.io/client-go/util/homedir"
 
-	kubekeyapiv1alpha2 "github.com/kubesys/kubekey/v3/cmd/kk/apis/kubekey/v1alpha2"
-	"github.com/kubesys/kubekey/v3/cmd/kk/pkg/common"
-	"github.com/kubesys/kubekey/v3/cmd/kk/pkg/core/logger"
+	kubekeyapiv1alpha2 "github.com/kubesys/kubekey/cmd/kk/apis/kubekey/v1alpha2"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/common"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/logger"
 )
 
 func debug(format string, v ...interface{}) {

@@ -26,9 +26,9 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/connector"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/logger"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/util"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/connector"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/logger"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/util"
 )
 
 // ClusterSpec defines the desired state of Cluster

@@ -17,11 +17,11 @@
 package images
 
 import (
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/common"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/task"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/images"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/kubernetes"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/phase/binary"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/common"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/task"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/images"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/kubernetes"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/phase/binary"
 )
 
 type UpgradeImagesModule struct {

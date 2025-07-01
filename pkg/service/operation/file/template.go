@@ -21,9 +21,9 @@ import (
 	"path/filepath"
 	"text/template"
 
-	"github.com/kubesphere/kubekey/v3/pkg/clients/ssh"
-	"github.com/kubesphere/kubekey/v3/pkg/rootfs"
-	"github.com/kubesphere/kubekey/v3/pkg/util/filesystem"
+	"github.com/kubesys/kubekey/pkg/clients/ssh"
+	"github.com/kubesys/kubekey/pkg/rootfs"
+	"github.com/kubesys/kubekey/pkg/util/filesystem"
 )
 
 // Data is the data that will be passed to the template.

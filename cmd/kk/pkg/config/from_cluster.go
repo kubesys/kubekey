@@ -33,9 +33,9 @@ import (
 	"github.com/spf13/viper"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	kubekeyapiv1alpha2 "github.com/kubesphere/kubekey/v3/cmd/kk/apis/kubekey/v1alpha2"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/util"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/utils"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/utils"
+	kubekeyapiv1alpha2 "github.com/kubesys/kubekey/cmd/kk/apis/kubekey/v1alpha2"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/util"
 )
 
 var (

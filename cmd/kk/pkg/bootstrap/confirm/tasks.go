@@ -23,14 +23,14 @@ import (
 	"regexp"
 	"strings"
 
-	versionK8S "github.com/kubesphere/kubekey/v3/cmd/kk/pkg/version/kubernetes"
+	versionK8S "github.com/kubesys/kubekey/cmd/kk/pkg/version/kubernetes"
 
-	kubekeyapiv1alpha2 "github.com/kubesphere/kubekey/v3/cmd/kk/apis/kubekey/v1alpha2"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/common"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/action"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/connector"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/logger"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/util"
+	kubekeyapiv1alpha2 "github.com/kubesys/kubekey/cmd/kk/apis/kubekey/v1alpha2"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/common"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/action"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/connector"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/logger"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/util"
 	"github.com/mitchellh/mapstructure"
 	"github.com/modood/table"
 	"github.com/pkg/errors"
@@ -107,7 +107,7 @@ func (i *InstallationConfirm) Execute(runtime connector.Runtime) error {
 	fmt.Println("")
 	fmt.Println("This is a simple check of your environment.")
 	fmt.Println("Before installation, ensure that your machines meet all requirements specified at")
-	fmt.Println("https://github.com/kubesphere/kubekey#requirements-and-recommendations")
+	fmt.Println("https://github.com/kubesys/kubekey#requirements-and-recommendations")
 	fmt.Println("")
 
 	// check k8s version is supported
@@ -138,7 +138,7 @@ func (i *InstallationConfirm) Execute(runtime connector.Runtime) error {
 		fmt.Println("Yoc can also specify a container runtime other than Docker to install Kubernetes v1.24 or later.")
 		fmt.Println("You can set \"spec.kubernetes.containerManager\" in the configuration file to \"containerd\" or add \"--container-manager containerd\" to the \"./kk create cluster\" command.")
 		fmt.Println("For more information, see:")
-		fmt.Println("https://github.com/kubesphere/kubekey/blob/master/docs/commands/kk-create-cluster.md")
+		fmt.Println("https://github.com/kubesys/kubekey/blob/master/docs/commands/kk-create-cluster.md")
 		fmt.Println("https://kubernetes.io/docs/setup/production-environment/container-runtimes/#container-runtimes")
 		fmt.Println("https://kubernetes.io/blog/2022/02/17/dockershim-faq/")
 		fmt.Println("https://github.com/Mirantis/cri-dockerd")

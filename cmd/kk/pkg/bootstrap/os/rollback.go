@@ -22,10 +22,10 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/bootstrap/os/repository"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/common"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/connector"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/ending"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/bootstrap/os/repository"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/common"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/connector"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/ending"
 )
 
 type RollbackUmount struct {

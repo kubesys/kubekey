@@ -27,8 +27,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/common"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/logger"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/common"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/logger"
 )
 
 func IsExist(path string) bool {

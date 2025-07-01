@@ -1,5 +1,5 @@
 /*
- Copyright 2022 The KubeSphere Authors.
+ Copyright 2022 The kubesys Authors.
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -26,10 +26,10 @@ import (
 	clusterv1 "sigs.k8s.io/cluster-api/api/v1beta1"
 	"sigs.k8s.io/cluster-api/util/conditions"
 
-	infrav1 "github.com/kubesphere/kubekey/v3/api/v1beta1"
-	"github.com/kubesphere/kubekey/v3/pkg/clients/ssh"
-	"github.com/kubesphere/kubekey/v3/pkg/scope"
-	"github.com/kubesphere/kubekey/v3/pkg/service"
+	infrav1 "github.com/kubesys/kubekey/api/v1beta1"
+	"github.com/kubesys/kubekey/pkg/clients/ssh"
+	"github.com/kubesys/kubekey/pkg/scope"
+	"github.com/kubesys/kubekey/pkg/service"
 )
 
 func (r *Reconciler) phaseFactory(kkInstanceScope scope.KKInstanceScope) []func(context.Context, ssh.Interface,

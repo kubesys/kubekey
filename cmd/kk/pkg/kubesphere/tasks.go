@@ -28,14 +28,14 @@ import (
 	"github.com/pkg/errors"
 	yamlV3 "gopkg.in/yaml.v3"
 
-	kubekeyapiv1alpha2 "github.com/kubesphere/kubekey/v3/cmd/kk/apis/kubekey/v1alpha2"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/common"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/connector"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/logger"
-	ksv2 "github.com/kubesphere/kubekey/v3/cmd/kk/pkg/kubesphere/v2"
-	ksv3 "github.com/kubesphere/kubekey/v3/cmd/kk/pkg/kubesphere/v3"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/version/kubesphere"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/version/kubesphere/templates"
+	kubekeyapiv1alpha2 "github.com/kubesys/kubekey/cmd/kk/apis/kubekey/v1alpha2"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/common"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/connector"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/logger"
+	ksv2 "github.com/kubesys/kubekey/cmd/kk/pkg/kubesphere/v2"
+	ksv3 "github.com/kubesys/kubekey/cmd/kk/pkg/kubesphere/v3"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/version/kubesphere"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/version/kubesphere/templates"
 )
 
 type AddInstallerConfig struct {

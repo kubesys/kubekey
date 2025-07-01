@@ -19,8 +19,8 @@ package alpha
 import (
 	"github.com/spf13/cobra"
 
-	"github.com/kubesys/kubekey/v3/cmd/kk/cmd/create/phase"
-	"github.com/kubesys/kubekey/v3/cmd/kk/cmd/options"
+	"github.com/kubesys/kubekey/cmd/kk/cmd/create/phase"
+	"github.com/kubesys/kubekey/cmd/kk/cmd/options"
 )
 
 type CreateOptions struct {

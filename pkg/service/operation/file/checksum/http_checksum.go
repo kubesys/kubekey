@@ -29,7 +29,7 @@ import (
 	"github.com/hashicorp/go-getter"
 	"github.com/pkg/errors"
 
-	"github.com/kubesphere/kubekey/v3/pkg/rootfs"
+	"github.com/kubesys/kubekey/pkg/rootfs"
 )
 
 // HTTPChecksum is a checksum that is downloaded from a URL.

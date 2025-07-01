@@ -26,8 +26,8 @@ import (
 	"github.com/spf13/cobra"
 	"gopkg.in/yaml.v3"
 
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/version/kubernetes"
-	"github.com/kubesphere/kubekey/v3/version"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/version/kubernetes"
+	"github.com/kubesys/kubekey/version"
 )
 
 type Version struct {

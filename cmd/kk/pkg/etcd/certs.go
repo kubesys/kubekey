@@ -29,11 +29,11 @@ import (
 	certutil "k8s.io/client-go/util/cert"
 	netutils "k8s.io/utils/net"
 
-	kubekeyapiv1alpha2 "github.com/kubesphere/kubekey/v3/cmd/kk/apis/kubekey/v1alpha2"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/common"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/connector"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/util"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/utils/certs"
+	kubekeyapiv1alpha2 "github.com/kubesys/kubekey/cmd/kk/apis/kubekey/v1alpha2"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/common"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/connector"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/util"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/utils/certs"
 )
 
 // KubekeyCertEtcdCA is the definition of the root CA used by the hosted etcd server.
@@ -203,7 +203,7 @@ func GenerateAltName(k *common.KubeConf, runtime *connector.Runtime) *cert.AltNa
 
 	for _, host := range k.Cluster.Hosts {
 		dnsList = append(dnsList, host.Name)
-		internalAddress := netutils.ParseIPSloppy(strings.Split(host.InternalAddress,",")[0])
+		internalAddress := netutils.ParseIPSloppy(strings.Split(host.InternalAddress, ",")[0])
 		if internalAddress != nil {
 			ipList = append(ipList, internalAddress)
 		}

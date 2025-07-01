@@ -27,9 +27,9 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/controller"
 
-	kkclustercontroller "github.com/kubesphere/kubekey/v3/controllers/kkcluster"
-	kkinstancecontroller "github.com/kubesphere/kubekey/v3/controllers/kkinstance"
-	kkmachinecontroller "github.com/kubesphere/kubekey/v3/controllers/kkmachine"
+	kkclustercontroller "github.com/kubesys/kubekey/controllers/kkcluster"
+	kkinstancecontroller "github.com/kubesys/kubekey/controllers/kkinstance"
+	kkmachinecontroller "github.com/kubesys/kubekey/controllers/kkmachine"
 )
 
 // KKClusterReconciler reconciles a KKCluster object

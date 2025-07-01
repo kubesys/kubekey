@@ -2,8 +2,8 @@ package clusterinfo
 
 import (
 	"fmt"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/cmd/util"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/clusterinfo"
+	"github.com/kubesys/kubekey/cmd/kk/cmd/util"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/clusterinfo"
 	"github.com/spf13/cobra"
 )
 

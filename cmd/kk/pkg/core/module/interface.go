@@ -17,9 +17,9 @@
 package module
 
 import (
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/cache"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/connector"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/ending"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/cache"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/connector"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/ending"
 )
 
 type Module interface {

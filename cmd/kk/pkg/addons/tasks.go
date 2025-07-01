@@ -23,13 +23,13 @@ import (
 
 	"github.com/pkg/errors"
 
-	kubekeyapiv1alpha2 "github.com/kubesys/kubekey/v3/cmd/kk/apis/kubekey/v1alpha2"
-	"github.com/kubesys/kubekey/v3/cmd/kk/pkg/bootstrap/customscripts"
-	"github.com/kubesys/kubekey/v3/cmd/kk/pkg/common"
-	"github.com/kubesys/kubekey/v3/cmd/kk/pkg/core/connector"
-	"github.com/kubesys/kubekey/v3/cmd/kk/pkg/core/logger"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/module"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/pipeline"
+	kubekeyapiv1alpha2 "github.com/kubesys/kubekey/cmd/kk/apis/kubekey/v1alpha2"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/bootstrap/customscripts"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/common"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/connector"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/logger"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/module"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/pipeline"
 )
 
 type Install struct {

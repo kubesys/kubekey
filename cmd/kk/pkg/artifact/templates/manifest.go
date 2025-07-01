@@ -21,8 +21,8 @@ import (
 
 	"github.com/lithammer/dedent"
 
-	kubekeyv1alpha2 "github.com/kubesphere/kubekey/v3/cmd/kk/apis/kubekey/v1alpha2"
-	"github.com/kubesphere/kubekey/v3/cmd/kk/pkg/core/util"
+	kubekeyv1alpha2 "github.com/kubesys/kubekey/cmd/kk/apis/kubekey/v1alpha2"
+	"github.com/kubesys/kubekey/cmd/kk/pkg/core/util"
 )
 
 // Manifest defines the template of manifest file.

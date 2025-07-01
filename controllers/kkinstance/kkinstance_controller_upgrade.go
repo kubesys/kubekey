@@ -1,5 +1,5 @@
 /*
- Copyright 2022 The KubeSphere Authors.
+ Copyright 2022 The kubesys Authors.
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -36,8 +36,8 @@ import (
 	"sigs.k8s.io/cluster-api/util/conditions"
 	ctrl "sigs.k8s.io/controller-runtime"
 
-	infrav1 "github.com/kubesphere/kubekey/v3/api/v1beta1"
-	"github.com/kubesphere/kubekey/v3/pkg/scope"
+	infrav1 "github.com/kubesys/kubekey/api/v1beta1"
+	"github.com/kubesys/kubekey/pkg/scope"
 )
 
 func (r *Reconciler) reconcileInPlaceBinaryService(_ context.Context, instanceScope *scope.InstanceScope, kkInstanceScope scope.KKInstanceScope) (ctrl.Result, error) {
