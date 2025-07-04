@@ -595,7 +595,12 @@ $(ISO_BUILD_NAMES):
 		--build-arg TARGETARCH=$(ISO_ARCH) \
 		-o type=local,dest=$(ISO_OUTPUT_DIR) \
 		-f $(ISO_BUILD_WORKDIR)/dockerfile.$(subst build-iso-,,$@) \
+		-t iso-img \
 		$(ISO_BUILD_WORKDIR)
+	docker create --name iso-container iso-img /bin/true
+	docker cp iso-container:/ $(ISO_OUTPUT_DIR)
+	docker rm iso-container
+	docker rmi iso-img
 
 go-releaser-test:
 	goreleaser release --rm-dist --skip-publish --snapshot
